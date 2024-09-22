@@ -4,7 +4,7 @@
     "description": "Create Keycloak themes using React",
     "repository": {
         "type": "git",
-        "url": "git://github.com/keycloakify/keycloakify.git"
+        "url": "git://github.com/RionizSoftware/rioniz-keycloakify.git"
     },
     "scripts": {
         "prepare": "tsx scripts/generate-i18n-messages.ts",
