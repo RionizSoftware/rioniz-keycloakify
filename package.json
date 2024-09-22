@@ -32,7 +32,7 @@
             "pre-commit": "lint-staged -v"
         }
     },
-    "author": "u/garronej",
+    "author": "u/uchar",
     "license": "MIT",
     "files": [
         "dist/",
