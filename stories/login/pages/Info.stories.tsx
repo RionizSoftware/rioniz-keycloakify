@@ -46,7 +46,7 @@ export const WithRequiredActions: Story = {
                     summary: "Required actions: "
                 },
                 requiredActions: ["CONFIGURE_TOTP", "UPDATE_PROFILE", "VERIFY_EMAIL", "CUSTOM_ACTION"],
-                "x-keycloakify": {
+                "x-rionizkeycloakify": {
                     messages: {
                         "requiredAction.CUSTOM_ACTION": "Custom action"
                     }

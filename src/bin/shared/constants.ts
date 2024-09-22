@@ -1,5 +1,5 @@
 export const WELL_KNOWN_DIRECTORY_BASE_NAME = {
-    KEYCLOAKIFY_DEV_RESOURCES: "keycloakify-dev-resources",
+    KEYCLOAKIFY_DEV_RESOURCES: "rionizkeycloakify-dev-resources",
     RESOURCES_COMMON: "resources-common",
     DIST: "dist"
 } as const;
@@ -68,6 +68,6 @@ export const ACCOUNT_THEME_PAGE_IDS = [
 export type LoginThemePageId = (typeof LOGIN_THEME_PAGE_IDS)[number];
 export type AccountThemePageId = (typeof ACCOUNT_THEME_PAGE_IDS)[number];
 
-export const CONTAINER_NAME = "keycloak-keycloakify";
+export const CONTAINER_NAME = "keycloak-rionizkeycloakify";
 
 export const FALLBACK_LANGUAGE_TAG = "en";

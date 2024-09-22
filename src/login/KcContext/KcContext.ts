@@ -1,8 +1,8 @@
-import type { ThemeType, LoginThemePageId } from "keycloakify/bin/shared/constants";
-import type { ValueOf } from "keycloakify/tools/ValueOf";
+import type { ThemeType, LoginThemePageId } from "rionizkeycloakify/bin/shared/constants";
+import type { ValueOf } from "rionizkeycloakify/tools/ValueOf";
 import { assert } from "tsafe/assert";
 import type { Equals } from "tsafe";
-import type { ClassKey } from "keycloakify/login/TemplateProps";
+import type { ClassKey } from "rionizkeycloakify/login/TemplateProps";
 
 export type ExtendKcContext<
     KcContextExtension extends { properties?: Record<string, string | undefined> },
@@ -150,7 +150,7 @@ export declare namespace KcContext {
             getFirstError: (...fieldNames: string[]) => string;
         };
         properties: {};
-        "x-keycloakify": {
+        "x-rionizkeycloakify": {
             messages: Record<string, string>;
         };
     };
@@ -763,7 +763,7 @@ export declare namespace Validators {
 
 /**
  * Theses values are added by: https://github.com/jcputney/keycloak-theme-additional-info-extension
- * A Keycloak Java extension used as dependency in Keycloakify.
+ * A Keycloak Java extension used as dependency in rionizkeycloakify.
  */
 export type PasswordPolicies = {
     /** The minimum length of the password */

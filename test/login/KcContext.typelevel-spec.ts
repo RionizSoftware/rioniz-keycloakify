@@ -1,6 +1,6 @@
-import type { ExtendKcContext } from "keycloakify/login";
-import { createGetKcContextMock } from "keycloakify/login/KcContext";
-import { KcContext as KcContextBase } from "keycloakify/login/KcContext";
+import type { ExtendKcContext } from "rionizkeycloakify/login";
+import { createGetKcContextMock } from "rionizkeycloakify/login/KcContext";
+import { KcContext as KcContextBase } from "rionizkeycloakify/login/KcContext";
 import { assert, type Equals } from "tsafe/assert";
 import { Reflect } from "tsafe/Reflect";
 

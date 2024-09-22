@@ -26,16 +26,16 @@ kcContext.ftlTemplateFileName = "${xKeycloakify.ftlTemplateFileName}";
 
 <@addNonAutomaticallyGatherableMessagesToXKeycloakifyMessages />
 
-kcContext["x-keycloakify"] = {};
+kcContext["x-rionizkeycloakify"] = {};
 
-kcContext["x-keycloakify"].resourcesPath = "${xKeycloakify.resourcesPath}";
+kcContext["x-rionizkeycloakify"].resourcesPath = "${xKeycloakify.resourcesPath}";
 
 {
     var messages = {};
     <#list xKeycloakify.messages as key, resolvedMsg>
         messages["${key}"] = decodeHtmlEntities("${resolvedMsg?js_string}");
     </#list>
-    kcContext["x-keycloakify"].messages = messages;
+    kcContext["x-rionizkeycloakify"].messages = messages;
 }
 
 if( 
@@ -142,17 +142,17 @@ function decodeHtmlEntities(htmlStr){
                     key == "updateProfileCtx" && 
                     areSamePath(path, [])
                 ) || (
-                    <#-- https://github.com/keycloakify/keycloakify/pull/65#issuecomment-991896344 (reports with saml-post-form.ftl) -->
-                    <#-- https://github.com/keycloakify/keycloakify/issues/91#issue-1212319466 (reports with error.ftl and Kc18) -->
-                    <#-- https://github.com/keycloakify/keycloakify/issues/109#issuecomment-1134610163 -->
-                    <#-- https://github.com/keycloakify/keycloakify/issues/357 -->
-                    <#-- https://github.com/keycloakify/keycloakify/discussions/406#discussioncomment-7514787 -->
+                    <#-- https://github.com/rionizkeycloakify/rionizkeycloakify/pull/65#issuecomment-991896344 (reports with saml-post-form.ftl) -->
+                    <#-- https://github.com/rionizkeycloakify/rionizkeycloakify/issues/91#issue-1212319466 (reports with error.ftl and Kc18) -->
+                    <#-- https://github.com/rionizkeycloakify/rionizkeycloakify/issues/109#issuecomment-1134610163 -->
+                    <#-- https://github.com/rionizkeycloakify/rionizkeycloakify/issues/357 -->
+                    <#-- https://github.com/rionizkeycloakify/rionizkeycloakify/discussions/406#discussioncomment-7514787 -->
                     key == "loginAction" && 
                     areSamePath(path, ["url"]) && 
                     ["saml-post-form.ftl", "error.ftl", "info.ftl", "login-oauth-grant.ftl", "logout-confirm.ftl", "login-oauth2-device-verify-user-code.ftl"]?seq_contains(xKeycloakify.pageId) &&
                     !(auth?has_content && auth.showTryAnotherWayLink())
                 ) || (
-                    <#-- https://github.com/keycloakify/keycloakify/issues/362 -->
+                    <#-- https://github.com/rionizkeycloakify/rionizkeycloakify/issues/362 -->
                     ["secretData", "value"]?seq_contains(key) && 
                     areSamePath(path, [ "totp", "otpCredentials", "*" ])
                 ) || (
@@ -185,7 +185,7 @@ function decodeHtmlEntities(htmlStr){
                     key == "saml.signing.private.key" &&
                     areSamePath(path, ["client", "attributes"])
                 ) || (
-                    <#-- See: https://github.com/keycloakify/keycloakify/issues/534 -->
+                    <#-- See: https://github.com/rionizkeycloakify/rionizkeycloakify/issues/534 -->
                     key == "password" &&
                     areSamePath(path, ["login"])
                 ) || (
@@ -239,7 +239,7 @@ function decodeHtmlEntities(htmlStr){
                 <#continue>
             </#if>
 
-            <#-- https://github.com/keycloakify/keycloakify/discussions/406 -->
+            <#-- https://github.com/rionizkeycloakify/rionizkeycloakify/discussions/406 -->
             <#if (
                 key == "attemptedUsername" &&
                 areSamePath(path, ["auth"]) &&
@@ -371,7 +371,7 @@ function decodeHtmlEntities(htmlStr){
 
             <#list fieldNames as fieldName>
 
-                <#-- See: https://github.com/keycloakify/keycloakify/issues/217 -->
+                <#-- See: https://github.com/rionizkeycloakify/rionizkeycloakify/issues/217 -->
                 <#if xKeycloakify.pageId == "login.ftl" >
 
                     <#if fieldName == "username">
@@ -419,7 +419,7 @@ function decodeHtmlEntities(htmlStr){
 
             <#list fieldNames as fieldName>
 
-                <#-- See: https://github.com/keycloakify/keycloakify/issues/217 -->
+                <#-- See: https://github.com/rionizkeycloakify/rionizkeycloakify/issues/217 -->
                 <#if xKeycloakify.pageId == "login.ftl" >
                     <#if fieldName == "username">
 

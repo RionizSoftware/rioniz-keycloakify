@@ -1,16 +1,16 @@
-import "keycloakify/tools/Array.prototype.every";
+import "rionizkeycloakify/tools/Array.prototype.every";
 import { useMemo, useReducer, useEffect, Fragment, type Dispatch } from "react";
 import { assert, type Equals } from "tsafe/assert";
 import { id } from "tsafe/id";
-import { structuredCloneButFunctions } from "keycloakify/tools/structuredCloneButFunctions";
-import { useConstCallback } from "keycloakify/tools/useConstCallback";
-import { emailRegexp } from "keycloakify/tools/emailRegExp";
-import { formatNumber } from "keycloakify/tools/formatNumber";
-import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
-import type { PasswordPolicies, Attribute, Validators } from "keycloakify/login/KcContext";
+import { structuredCloneButFunctions } from "rionizkeycloakify/tools/structuredCloneButFunctions";
+import { useConstCallback } from "rionizkeycloakify/tools/useConstCallback";
+import { emailRegexp } from "rionizkeycloakify/tools/emailRegExp";
+import { formatNumber } from "rionizkeycloakify/tools/formatNumber";
+import { useInsertScriptTags } from "rionizkeycloakify/tools/useInsertScriptTags";
+import type { PasswordPolicies, Attribute, Validators } from "rionizkeycloakify/login/KcContext";
 import type { KcContext } from "../KcContext";
-import type { MessageKey_defaultSet } from "keycloakify/login/i18n";
-import { KcContextLike as KcContextLike_i18n } from "keycloakify/login/i18n";
+import type { MessageKey_defaultSet } from "rionizkeycloakify/login/i18n";
+import { KcContextLike as KcContextLike_i18n } from "rionizkeycloakify/login/i18n";
 import type { I18n } from "../i18n";
 
 export type FormFieldError = {
@@ -113,7 +113,7 @@ export function useUserProfileForm(params: UseUserProfileFormParams): ReturnType
     const { insertScriptTags } = useInsertScriptTags({
         componentOrHookName: "useUserProfileForm",
         scriptTags: Object.keys(kcContext.profile?.html5DataAnnotations ?? {})
-            .filter(key => key !== "kcMultivalued" && key !== "kcNumberFormat") // NOTE: Keycloakify handles it.
+            .filter(key => key !== "kcMultivalued" && key !== "kcNumberFormat") // NOTE: rionizkeycloakify handles it.
             .map(key => ({
                 type: "module",
                 src: `${kcContext.url.resourcesPath}/js/${key}.js`

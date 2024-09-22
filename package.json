@@ -1,10 +1,10 @@
 {
-    "name": "rioniz-keycloakify",
-    "version": "10.1.4",
+    "name": "rionizkeycloakify",
+    "version": "10.1.4-1",
     "description": "Create Keycloak themes using React",
     "repository": {
         "type": "git",
-        "url": "git://github.com/RionizSoftware/rioniz-keycloakify.git"
+        "url": "git://github.com/RionizSoftware/rioniz-rionizkeycloakify.git"
     },
     "scripts": {
         "prepare": "tsx scripts/generate-i18n-messages.ts",
@@ -20,7 +20,7 @@
         "dump-keycloak-realm": "tsx scripts/dump-keycloak-realm.ts"
     },
     "bin": {
-        "keycloakify": "dist/bin/main.js"
+        "rionizkeycloakify": "dist/bin/main.js"
     },
     "lint-staged": {
         "*.{ts,tsx,json,md}": [
@@ -60,7 +60,7 @@
         "account",
         "bluehats"
     ],
-    "homepage": "https://www.keycloakify.dev",
+    "homepage": "https://www.rionizkeycloakify.dev",
     "dependencies": {
         "tsafe": "^1.6.6"
     },

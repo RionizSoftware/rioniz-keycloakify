@@ -74,14 +74,14 @@ async function appBuild_webpack(params: {
     const entries = Object.entries(
         (JSON.parse(fs.readFileSync(buildContext.packageJsonFilePath).toString("utf8"))
             .scripts ?? {}) as Record<string, string>
-    ).filter(([, scriptCommand]) => scriptCommand.includes("keycloakify build"));
+    ).filter(([, scriptCommand]) => scriptCommand.includes("rionizkeycloakify build"));
 
     if (entries.length === 0) {
         console.log(
             chalk.red(
                 [
                     `You should have a script in your package.json at ${pathRelative(process.cwd(), pathDirname(buildContext.packageJsonFilePath))}`,
-                    `that includes the 'keycloakify build' command`
+                    `that includes the 'rionizkeycloakify build' command`
                 ].join(" ")
             )
         );
@@ -108,7 +108,7 @@ async function appBuild_webpack(params: {
         const appBuildSubCommands: string[] = [];
 
         for (const subCmd of scriptCommand.split("&&").map(s => s.trim())) {
-            if (subCmd.includes("keycloakify build")) {
+            if (subCmd.includes("rionizkeycloakify build")) {
                 break;
             }
 
@@ -121,7 +121,7 @@ async function appBuild_webpack(params: {
     if (appBuildSubCommands.length === 0) {
         console.log(
             chalk.red(
-                `Your ${scriptName} script should look like "... && keycloakify build ..."`
+                `Your ${scriptName} script should look like "... && rionizkeycloakify build ..."`
             )
         );
         process.exit(-1);

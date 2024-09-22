@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from "react";
-import { useConst } from "keycloakify/tools/useConst";
+import { useConst } from "rionizkeycloakify/tools/useConst";
 import { id } from "tsafe/id";
-import { useOnFistMount } from "keycloakify/tools/useOnFirstMount";
+import { useOnFistMount } from "rionizkeycloakify/tools/useOnFirstMount";
 
 const alreadyMountedComponentOrHookNames = new Set<string>();
 

@@ -69,7 +69,7 @@ export async function command(params: { cliCommandOptions: CliCommandOptions }) 
 
     console.log(
         [
-            chalk.cyan(`keycloakify v${readThisNpmPackageVersion()}`),
+            chalk.cyan(`rionizkeycloakify v${readThisNpmPackageVersion()}`),
             chalk.green(
                 `Building the keycloak theme in .${pathSep}${pathRelative(
                     process.cwd(),

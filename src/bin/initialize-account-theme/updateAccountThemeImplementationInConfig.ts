@@ -60,14 +60,14 @@ export function updateAccountThemeImplementationInConfig(params: {
             {
                 const parsedPackageJson = (() => {
                     type ParsedPackageJson = {
-                        keycloakify: Record<string, unknown>;
+                        rionizkeycloakify: Record<string, unknown>;
                     };
 
                     const zParsedPackageJson = (() => {
                         type TargetType = ParsedPackageJson;
 
                         const zTargetType = z.object({
-                            keycloakify: z.record(z.unknown())
+                            rionizkeycloakify: z.record(z.unknown())
                         });
 
                         assert<Equals<z.infer<typeof zTargetType>, TargetType>>();
@@ -84,7 +84,7 @@ export function updateAccountThemeImplementationInConfig(params: {
                     return parsedPackageJson;
                 })();
 
-                parsedPackageJson.keycloakify.accountThemeImplementation =
+                parsedPackageJson.rionizkeycloakify.accountThemeImplementation =
                     accountThemeType;
 
                 fs.writeFileSync(

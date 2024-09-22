@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
+import { useInsertScriptTags } from "rionizkeycloakify/tools/useInsertScriptTags";
 
 type I18nLike = {
     msgStr: (key: "recovery-codes-download-file-header" | "recovery-codes-download-file-description" | "recovery-codes-download-file-date") => string;

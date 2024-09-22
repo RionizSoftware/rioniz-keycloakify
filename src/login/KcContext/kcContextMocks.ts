@@ -1,12 +1,12 @@
-import "keycloakify/tools/Object.fromEntries";
+import "rionizkeycloakify/tools/Object.fromEntries";
 import type { KcContext, Attribute } from "./KcContext";
 import {
     WELL_KNOWN_DIRECTORY_BASE_NAME,
     type LoginThemePageId
-} from "keycloakify/bin/shared/constants";
+} from "rionizkeycloakify/bin/shared/constants";
 import { id } from "tsafe/id";
 import { assert, type Equals } from "tsafe/assert";
-import { BASE_URL } from "keycloakify/lib/BASE_URL";
+import { BASE_URL } from "rionizkeycloakify/lib/BASE_URL";
 
 const attributesByName = Object.fromEntries(
     id<Attribute[]>([
@@ -160,7 +160,7 @@ export const kcContextCommonMock: KcContext.Common = {
     scripts: [],
     isAppInitiatedAction: false,
     properties: {},
-    "x-keycloakify": {
+    "x-rionizkeycloakify": {
         messages: {}
     }
 };

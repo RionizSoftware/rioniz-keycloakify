@@ -1,6 +1,6 @@
 const brandImage = "logo.png";
-const brandTitle = "Keycloakify";
-const brandUrl = "https://github.com/keycloakify/keycloakify";
+const brandTitle = "rionizkeycloakify";
+const brandUrl = "https://github.com/RionizSoftware/rioniz-rionizkeycloakify";
 const fontBase = '"Work Sans", sans-serif';
 const fontCode = "monospace";
 

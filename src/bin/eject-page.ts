@@ -78,7 +78,7 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
         const srcDirPath = pathJoin(
             pathDirname(buildContext.packageJsonFilePath),
             "node_modules",
-            "@keycloakify",
+            "@rionizkeycloakify",
             "keycloak-account-ui",
             "src"
         );
@@ -125,7 +125,7 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
                 ).replace(/.tsx$/, "");
 
                 const modifiedKcPageTsxCode = kcPageTsxCode.replace(
-                    `@keycloakify/keycloak-account-ui/${componentName}`,
+                    `@rionizkeycloakify/keycloak-account-ui/${componentName}`,
                     `./${componentName}`
                 );
 
@@ -188,10 +188,10 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
                     "UserProfileFormFields Renders the form of the register.ftl, login-update-profile.ftl, update-email.ftl and idp-review-user-profile.ftl"
                 ),
                 chalk.gray(
-                    "You can also explicitly provide the pages e.g. `npx keycloakify eject-page --pages Template.tsx,Login.ftl,...`"
+                    "You can also explicitly provide the pages e.g. `npx rionizkeycloakify eject-page --pages Template.tsx,Login.ftl,...`"
                 ),
                 chalk.gray(
-                    "You can also use `npx keycloakify eject-page --pages all` to add all pages"
+                    "You can also use `npx rionizkeycloakify eject-page --pages all` to add all pages"
                 )
             ].join("\n")
         );
@@ -288,7 +288,7 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
 
         //Remove spaces in case of file formatting change in future
         const passwordWrapperRegex =
-            /import\s*{\s*PasswordWrapper\s*}\s*from\s*"keycloakify\/login\/pages\/PasswordWrapper";/;
+            /import\s*{\s*PasswordWrapper\s*}\s*from\s*"rionizkeycloakify\/login\/pages\/PasswordWrapper";/;
 
         // Copy PasswordWrapper if it's imported
         if (passwordWrapperRegex.test(componentCode)) {
@@ -322,7 +322,7 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
         console.log(
             `${chalk.green("✓")} ${chalk.bold(
                 pathJoin(".", pathRelative(process.cwd(), targetFilePath))
-            )} copy pasted from the Keycloakify source code into your project`
+            )} copy pasted from the rionizkeycloakify source code into your project`
         );
 
         edit_KcApp: {
@@ -345,12 +345,12 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
                 switch (pageIdOrComponent) {
                     case templateValue:
                         return kcAppTsxCode.replace(
-                            `keycloakify/${themeType}/Template`,
+                            `rionizkeycloakify/${themeType}/Template`,
                             "./Template"
                         );
                     case userProfileFormFieldsValue:
                         return kcAppTsxCode.replace(
-                            `keycloakify/login/UserProfileFormFields`,
+                            `rionizkeycloakify/login/UserProfileFormFields`,
                             "./UserProfileFormFields"
                         );
                 }

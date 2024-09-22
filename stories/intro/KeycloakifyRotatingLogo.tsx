@@ -3,9 +3,9 @@ import { memo, useState } from "react";
 import { useConstCallback } from "powerhooks";
 import { keyframes } from "tss-react";
 // @ts-expect-error
-import keycloakifyLogoHeroMovingPngUrl from "./keycloakify-logo-hero-moving.png";
+import keycloakifyLogoHeroMovingPngUrl from "./rionizkeycloakify-logo-hero-moving.png";
 // @ts-expect-error
-import keycloakifyLogoHeroStillPngUrl from "./keycloakify-logo-hero-still.png";
+import keycloakifyLogoHeroStillPngUrl from "./rionizkeycloakify-logo-hero-still.png";
 import { tss } from "../tss";
 
 export type Props = {

@@ -1,16 +1,16 @@
 import { lazy, Suspense } from "react";
 import { assert, type Equals } from "tsafe/assert";
-import type { PageProps } from "keycloakify/account/pages/PageProps";
-import type { KcContext } from "keycloakify/account/KcContext";
-import { I18n } from "keycloakify/account/i18n";
+import type { PageProps } from "rionizkeycloakify/account/pages/PageProps";
+import type { KcContext } from "rionizkeycloakify/account/KcContext";
+import { I18n } from "rionizkeycloakify/account/i18n";
 
-const Password = lazy(() => import("keycloakify/account/pages/Password"));
-const Account = lazy(() => import("keycloakify/account/pages/Account"));
-const Sessions = lazy(() => import("keycloakify/account/pages/Sessions"));
-const Totp = lazy(() => import("keycloakify/account/pages/Totp"));
-const Applications = lazy(() => import("keycloakify/account/pages/Applications"));
-const Log = lazy(() => import("keycloakify/account/pages/Log"));
-const FederatedIdentity = lazy(() => import("keycloakify/account/pages/FederatedIdentity"));
+const Password = lazy(() => import("rionizkeycloakify/account/pages/Password"));
+const Account = lazy(() => import("rionizkeycloakify/account/pages/Account"));
+const Sessions = lazy(() => import("rionizkeycloakify/account/pages/Sessions"));
+const Totp = lazy(() => import("rionizkeycloakify/account/pages/Totp"));
+const Applications = lazy(() => import("rionizkeycloakify/account/pages/Applications"));
+const Log = lazy(() => import("rionizkeycloakify/account/pages/Log"));
+const FederatedIdentity = lazy(() => import("rionizkeycloakify/account/pages/FederatedIdentity"));
 
 export default function DefaultPage(props: PageProps<KcContext, I18n>) {
     const { kcContext, ...rest } = props;

@@ -85,13 +85,13 @@ export function replaceImportsInJsCode_vite(params: {
                 fixedJsCode = replaceAll(
                     fixedJsCode,
                     `"${relativePathOfAssetFile}"`,
-                    `(window.kcContext["x-keycloakify"].resourcesPath.substring(1) + "/${WELL_KNOWN_DIRECTORY_BASE_NAME.DIST}/${relativePathOfAssetFile}")`
+                    `(window.kcContext["x-rionizkeycloakify"].resourcesPath.substring(1) + "/${WELL_KNOWN_DIRECTORY_BASE_NAME.DIST}/${relativePathOfAssetFile}")`
                 );
 
                 fixedJsCode = replaceAll(
                     fixedJsCode,
                     `"${buildContext.urlPathname ?? "/"}${relativePathOfAssetFile}"`,
-                    `(window.kcContext["x-keycloakify"].resourcesPath + "/${WELL_KNOWN_DIRECTORY_BASE_NAME.DIST}/${relativePathOfAssetFile}")`
+                    `(window.kcContext["x-rionizkeycloakify"].resourcesPath + "/${WELL_KNOWN_DIRECTORY_BASE_NAME.DIST}/${relativePathOfAssetFile}")`
                 );
             });
     }

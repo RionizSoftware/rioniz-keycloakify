@@ -1,11 +1,11 @@
 import { id } from "tsafe/id";
-import type { Attribute } from "keycloakify/login";
-import { createGetKcContextMock } from "keycloakify/login/KcContext";
+import type { Attribute } from "rionizkeycloakify/login";
+import { createGetKcContextMock } from "rionizkeycloakify/login/KcContext";
 import {
     kcContextMocks,
     kcContextCommonMock
-} from "keycloakify/login/KcContext/kcContextMocks";
-import { structuredCloneButFunctions } from "keycloakify/tools/structuredCloneButFunctions";
+} from "rionizkeycloakify/login/KcContext/kcContextMocks";
+import { structuredCloneButFunctions } from "rionizkeycloakify/tools/structuredCloneButFunctions";
 import { expect, it, describe } from "vitest";
 
 describe("createGetKcContextMock", () => {

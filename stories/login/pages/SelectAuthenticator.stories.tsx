@@ -68,7 +68,7 @@ export const WithRealmTranslations: Story = {
                         }
                     ]
                 },
-                "x-keycloakify": {
+                "x-rionizkeycloakify": {
                     messages: {
                         "home-idp-discovery-display-name": "Home identity provider",
                         "home-idp-discovery-help-text":

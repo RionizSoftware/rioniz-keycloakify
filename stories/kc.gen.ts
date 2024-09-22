@@ -1,4 +1,4 @@
-export const themeNames = ["keycloakify"] as const;
+export const themeNames = ["rionizkeycloakify"] as const;
 
 export type ThemeName = (typeof themeNames)[number];
 

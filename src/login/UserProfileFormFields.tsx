@@ -1,14 +1,14 @@
 import { useEffect, useReducer, Fragment } from "react";
-import { assert } from "keycloakify/tools/assert";
-import type { KcClsx } from "keycloakify/login/lib/kcClsx";
+import { assert } from "rionizkeycloakify/tools/assert";
+import type { KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import {
     useUserProfileForm,
     getButtonToDisplayForMultivaluedAttributeField,
     type FormAction,
     type FormFieldError
-} from "keycloakify/login/lib/useUserProfileForm";
-import type { UserProfileFormFieldsProps } from "keycloakify/login/UserProfileFormFieldsProps";
-import type { Attribute } from "keycloakify/login/KcContext";
+} from "rionizkeycloakify/login/lib/useUserProfileForm";
+import type { UserProfileFormFieldsProps } from "rionizkeycloakify/login/UserProfileFormFieldsProps";
+import type { Attribute } from "rionizkeycloakify/login/KcContext";
 import type { KcContext } from "./KcContext";
 import type { I18n } from "./i18n";
 

@@ -29,7 +29,7 @@ export async function initializeAccountTheme_singlePage(params: {
 }) {
     const { accountThemeSrcDirPath, buildContext } = params;
 
-    const OWNER = "keycloakify";
+    const OWNER = "rionizkeycloakify";
     const REPO = "keycloak-account-ui";
 
     const [semVersionedTag] = await getLatestsSemVersionedTag({
@@ -69,9 +69,8 @@ export async function initializeAccountTheme_singlePage(params: {
             })()
         );
 
-    dependencies.dependencies["@keycloakify/keycloak-account-ui"] = SemVer.stringify(
-        semVersionedTag.version
-    );
+    dependencies.dependencies["@rionizkeycloakify/keycloak-account-ui"] =
+        SemVer.stringify(semVersionedTag.version);
 
     const parsedPackageJson = (() => {
         type ParsedPackageJson = {

@@ -68,7 +68,7 @@ export const WithRestrictedToMITStudents: Story = {
                         }
                     }
                 },
-                "x-keycloakify": {
+                "x-rionizkeycloakify": {
                     messages: {
                         "profile.attributes.email.inputHelperTextBefore": "Please use your MIT or Berkeley email.",
                         "profile.attributes.email.pattern.error":
@@ -102,7 +102,7 @@ export const WithFavoritePet: Story = {
                         } satisfies Attribute
                     }
                 },
-                "x-keycloakify": {
+                "x-rionizkeycloakify": {
                     messages: {
                         "profile.attributes.favoritePet": "Favorite Pet",
                         "profile.attributes.favoritePet.options.cat": "Fluffy Cat",
@@ -176,7 +176,7 @@ export const WithTermsAcceptance: Story = {
         <KcPageStory
             kcContext={{
                 termsAcceptanceRequired: true,
-                "x-keycloakify": {
+                "x-rionizkeycloakify": {
                     messages: {
                         termsText: "<a href='https://example.com/terms'>Service Terms of Use</a>"
                     }

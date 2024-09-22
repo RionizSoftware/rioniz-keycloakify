@@ -31,12 +31,12 @@ function AccountSpa() {
         <div className={classes.root}>
             <div className={classes.content}>
                 <p>
-                    Keycloakify offers two option for creating an account theme:{" "}
-                    <a href="https://docs.keycloakify.dev/account-theme#multi-page" target="_blank">
+                    rionizkeycloakify offers two option for creating an account theme:{" "}
+                    <a href="https://docs.rionizkeycloakify.dev/account-theme#multi-page" target="_blank">
                         Multi Page
                     </a>{" "}
                     or{" "}
-                    <a href="https://docs.keycloakify.dev/account-theme#single-page" target="_blank">
+                    <a href="https://docs.rionizkeycloakify.dev/account-theme#single-page" target="_blank">
                         Single Page
                     </a>
                     . Since the account Single Page does not support Storybook, here is a screenshot of it's default look:
@@ -44,7 +44,7 @@ function AccountSpa() {
                     <br />
                     <img className={classes.screenshot} alt="image" src={screenshotPngUrl} />
                     <br />
-                    <a href="https://docs.keycloakify.dev/account-theme" target="_blank">
+                    <a href="https://docs.rionizkeycloakify.dev/account-theme" target="_blank">
                         Learn more
                     </a>
                 </p>

@@ -107,7 +107,7 @@ export async function generateResourcesForMainTheme(params: {
 
                     throw new Error(
                         [
-                            `Keycloakify build error: The ${WELL_KNOWN_DIRECTORY_BASE_NAME.KEYCLOAKIFY_DEV_RESOURCES} directory shouldn't exist in your build directory.`,
+                            `rionizkeycloakify build error: The ${WELL_KNOWN_DIRECTORY_BASE_NAME.KEYCLOAKIFY_DEV_RESOURCES} directory shouldn't exist in your build directory.`,
                             `(${pathRelative(process.cwd(), dirPath)}).\n`,
                             `Theses assets are only required for local development with Storybook.",
                             "Please remove this directory as an additional step of your command.\n`,
@@ -223,7 +223,7 @@ export async function generateResourcesForMainTheme(params: {
             }
 
             const accountUiDirPath = child_process
-                .execSync("npm list @keycloakify/keycloak-account-ui --parseable", {
+                .execSync("npm list @rionizkeycloakify/keycloak-account-ui --parseable", {
                     cwd: pathDirname(buildContext.packageJsonFilePath)
                 })
                 .toString("utf8")
@@ -233,7 +233,7 @@ export async function generateResourcesForMainTheme(params: {
 
             if (!fs.existsSync(messagesDirPath)) {
                 throw new Error(
-                    `Please update @keycloakify/keycloak-account-ui to 25.0.4-rc.5 or later.`
+                    `Please update @rionizkeycloakify/keycloak-account-ui to 25.0.4-rc.5 or later.`
                 );
             }
 

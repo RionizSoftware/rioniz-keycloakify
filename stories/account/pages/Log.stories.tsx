@@ -25,7 +25,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T12:29:08Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -41,7 +41,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T12:10:56Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -99,7 +99,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T11:32:54Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -115,7 +115,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:42:54Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -131,7 +131,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:42:52Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -147,7 +147,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:42:40Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -163,7 +163,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:42:09Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -183,14 +183,14 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:24:17Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [],
                             event: "logout"
                         },
                         {
                             date: "2024-04-26T09:23:54Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -206,7 +206,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:23:50Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -238,14 +238,14 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:23:15Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [],
                             event: "logout"
                         },
                         {
                             date: "2024-04-26T09:23:06Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -261,14 +261,14 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:22:53Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [],
                             event: "logout"
                         },
                         {
                             date: "2024-04-26T09:21:29Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -288,7 +288,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-26T09:17:32Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -304,7 +304,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-18T11:19:09Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",
@@ -320,7 +320,7 @@ export const Default: Story = {
                         {
                             date: "2024-04-18T11:18:50Z",
                             ipAddress: "127.0.0.1",
-                            client: "keycloakify-frontend",
+                            client: "rionizkeycloakify-frontend",
                             details: [
                                 {
                                     value: "openid-connect",

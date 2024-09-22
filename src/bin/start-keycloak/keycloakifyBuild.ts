@@ -20,9 +20,9 @@ export async function keycloakifyBuild(params: {
 
     const dResult = new Deferred<{ isSuccess: boolean }>();
 
-    console.log(chalk.blue("$ npx keycloakify build"));
+    console.log(chalk.blue("$ npx rionizkeycloakify build"));
 
-    const child = child_process.spawn("npx", ["keycloakify", "build"], {
+    const child = child_process.spawn("npx", ["rionizkeycloakify", "build"], {
         cwd: buildContext.projectDirPath,
         env: {
             ...process.env,

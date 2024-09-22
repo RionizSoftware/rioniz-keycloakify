@@ -47,7 +47,7 @@ export const WithError: Story = {
     render: () => (
         <KcPageStory
             kcContext={{
-                url: { passwordUrl: "/auth/realms/keycloakify/account/password" },
+                url: { passwordUrl: "/auth/realms/rionizkeycloakify/account/password" },
                 stateChecker: "xQ7EOgFrLi4EvnJ8dbXKhwFGWk_bkOp0X89mhilt1os",
                 message: {
                     summary: "Invalid existing password.",

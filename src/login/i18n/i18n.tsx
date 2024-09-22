@@ -1,9 +1,9 @@
-import "keycloakify/tools/Object.fromEntries";
+import "rionizkeycloakify/tools/Object.fromEntries";
 import { assert } from "tsafe/assert";
 import messages_defaultSet_fallbackLanguage from "./messages_defaultSet/en";
 import { fetchMessages_defaultSet } from "./messages_defaultSet";
 import type { KcContext } from "../KcContext";
-import { FALLBACK_LANGUAGE_TAG } from "keycloakify/bin/shared/constants";
+import { FALLBACK_LANGUAGE_TAG } from "rionizkeycloakify/bin/shared/constants";
 import { id } from "tsafe/id";
 
 export type KcContextLike = {
@@ -11,7 +11,7 @@ export type KcContextLike = {
         currentLanguageTag: string;
         supported: { languageTag: string; url: string; label: string }[];
     };
-    "x-keycloakify": {
+    "x-rionizkeycloakify": {
         messages: Record<string, string>;
     };
 };
@@ -130,7 +130,7 @@ export function createGetI18n<MessageKey_themeDefined extends string = never>(me
                     }
                     return messagesByLanguageTag_themeDefined[firstLanguageTag];
                 })(),
-            messages_fromKcServer: kcContext["x-keycloakify"].messages
+            messages_fromKcServer: kcContext["x-rionizkeycloakify"].messages
         });
 
         const isCurrentLanguageFallbackLanguage = partialI18n.currentLanguageTag === FALLBACK_LANGUAGE_TAG;

@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { assert } from "keycloakify/tools/assert";
-import { clsx } from "keycloakify/tools/clsx";
-import type { TemplateProps } from "keycloakify/login/TemplateProps";
-import { getKcClsx } from "keycloakify/login/lib/kcClsx";
-import { useSetClassName } from "keycloakify/tools/useSetClassName";
-import { useStylesAndScripts } from "keycloakify/login/Template.useStylesAndScripts";
+import { assert } from "rionizkeycloakify/tools/assert";
+import { clsx } from "rionizkeycloakify/tools/clsx";
+import type { TemplateProps } from "rionizkeycloakify/login/TemplateProps";
+import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import { useSetClassName } from "rionizkeycloakify/tools/useSetClassName";
+import { useStylesAndScripts } from "rionizkeycloakify/login/Template.useStylesAndScripts";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
 

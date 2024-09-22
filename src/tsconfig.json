@@ -9,7 +9,7 @@
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
-            "keycloakify/*": ["./*"]
+            "rionizkeycloakify/*": ["./*"]
         },
         "jsx": "react-jsx",
         "allowSyntheticDefaultImports": true

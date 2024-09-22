@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
-import { assert } from "keycloakify/tools/assert";
-import { KcContext } from "keycloakify/login/KcContext/KcContext";
+import { useInsertScriptTags } from "rionizkeycloakify/tools/useInsertScriptTags";
+import { assert } from "rionizkeycloakify/tools/assert";
+import { KcContext } from "rionizkeycloakify/login/KcContext/KcContext";
 
 type KcContextLike = {
     url: {

@@ -13,8 +13,8 @@ assertNoPnpmDlx();
 
 const program = termost<CliCommandOptions>(
     {
-        name: "keycloakify",
-        description: "Keycloakify CLI",
+        name: "rionizkeycloakify",
+        description: "rionizkeycloakify CLI",
         version: readThisNpmPackageVersion()
     },
     {
@@ -38,9 +38,9 @@ program.option({
         return { long, short };
     })(),
     description: [
-        `For monorepos, path to the keycloakify project.`,
-        "Example: `npx keycloakify build --project packages/keycloak-theme`",
-        "https://docs.keycloakify.dev/build-options#project-or-p-cli-option"
+        `For monorepos, path to the rionizkeycloakify project.`,
+        "Example: `npx rionizkeycloakify build --project packages/keycloak-theme`",
+        "https://docs.rionizkeycloakify.dev/build-options#project-or-p-cli-option"
     ].join(" "),
     defaultValue: undefined
 });
@@ -52,7 +52,7 @@ function skip(_context: any, argv: { options: Record<string, unknown> }) {
 
     if (unrecognizedOptionKey !== undefined) {
         console.error(
-            `keycloakify: Unrecognized option: ${
+            `rionizkeycloakify: Unrecognized option: ${
                 unrecognizedOptionKey.length === 1 ? "-" : "--"
             }${unrecognizedOptionKey}`
         );
@@ -70,7 +70,7 @@ program
     .task({
         skip,
         handler: async cliCommandOptions => {
-            const { command } = await import("./keycloakify");
+            const { command } = await import("./rionizkeycloakify");
 
             await command({ cliCommandOptions });
         }
@@ -247,7 +247,7 @@ program
     ) {
         const { status } = child_process.spawnSync(
             "npx",
-            ["keycloakify", "build", ...rest],
+            ["rionizkeycloakify", "build", ...rest],
             {
                 stdio: "inherit"
             }

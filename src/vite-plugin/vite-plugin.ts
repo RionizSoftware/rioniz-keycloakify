@@ -17,13 +17,13 @@ import {
 import MagicString from "magic-string";
 import { generateKcGenTs } from "../bin/shared/generateKcGenTs";
 
-export namespace keycloakify {
+export namespace rionizkeycloakify {
     export type Params = BuildOptions & {
         postBuild?: (buildContext: Omit<BuildContext, "bundler">) => Promise<void>;
     };
 }
 
-export function keycloakify(params: keycloakify.Params) {
+export function rionizkeycloakify(params: rionizkeycloakify.Params) {
     const { postBuild, ...buildOptions } = params;
 
     let projectDirPath: string | undefined = undefined;
@@ -33,7 +33,7 @@ export function keycloakify(params: keycloakify.Params) {
     let shouldGenerateSourcemap: boolean | undefined = undefined;
 
     const plugin = {
-        name: "keycloakify",
+        name: "rionizkeycloakify",
         configResolved: async resolvedConfig => {
             shouldGenerateSourcemap = resolvedConfig.build.sourcemap !== false;
 
@@ -70,8 +70,8 @@ export function keycloakify(params: keycloakify.Params) {
                 ) {
                     throw new Error(
                         [
-                            `BASE_URL=${out} is not supported By Keycloakify. Use an absolute path instead.`,
-                            `If this is a problem, please open an issue at https://github.com/keycloakify/keycloakify/issues/new`
+                            `BASE_URL=${out} is not supported By rionizkeycloakify. Use an absolute path instead.`,
+                            `If this is a problem, please open an issue at https://github.com/rionizkeycloakify/rionizkeycloakify/issues/new`
                         ].join("\n")
                     );
                 }
@@ -167,7 +167,7 @@ export function keycloakify(params: keycloakify.Params) {
                     `(`,
                     `(window.kcContext === undefined || import.meta.env.MODE === "development")?`,
                     `"${urlPathname ?? "/"}":`,
-                    `(window.kcContext["x-keycloakify"].resourcesPath + "/${WELL_KNOWN_DIRECTORY_BASE_NAME.DIST}/")`,
+                    `(window.kcContext["x-rionizkeycloakify"].resourcesPath + "/${WELL_KNOWN_DIRECTORY_BASE_NAME.DIST}/")`,
                     `)`
                 ].join("")
             );

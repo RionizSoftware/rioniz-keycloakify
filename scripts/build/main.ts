@@ -8,7 +8,7 @@ import { createAccountV1Dir } from "./createAccountV1Dir";
 import chalk from "chalk";
 
 (async () => {
-    console.log(chalk.cyan("Building Keycloakify..."));
+    console.log(chalk.cyan("Building rionizkeycloakify..."));
 
     const startTime = Date.now();
 

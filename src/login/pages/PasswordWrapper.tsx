@@ -1,7 +1,7 @@
-import { type KcClsx } from "keycloakify/login/lib/kcClsx";
-import type { I18n } from "keycloakify/login/i18n";
+import { type KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import type { I18n } from "rionizkeycloakify/login/i18n";
 import { useEffect, useReducer } from "react";
-import { assert } from "keycloakify/tools/assert";
+import { assert } from "rionizkeycloakify/tools/assert";
 
 export function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
     const { kcClsx, i18n, passwordInputId, children } = props;

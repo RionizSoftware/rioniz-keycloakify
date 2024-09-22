@@ -1,8 +1,8 @@
-import "keycloakify/tools/Object.fromEntries";
-import { WELL_KNOWN_DIRECTORY_BASE_NAME } from "keycloakify/bin/shared/constants";
+import "rionizkeycloakify/tools/Object.fromEntries";
+import { WELL_KNOWN_DIRECTORY_BASE_NAME } from "rionizkeycloakify/bin/shared/constants";
 import { id } from "tsafe/id";
 import type { KcContext } from "./KcContext";
-import { BASE_URL } from "keycloakify/lib/BASE_URL";
+import { BASE_URL } from "rionizkeycloakify/lib/BASE_URL";
 
 const resourcesPath = `${BASE_URL}${WELL_KNOWN_DIRECTORY_BASE_NAME.KEYCLOAKIFY_DEV_RESOURCES}/account`;
 
@@ -83,7 +83,7 @@ export const kcContextCommonMock: KcContext.Common = {
         username: "doe_j"
     },
     properties: {},
-    "x-keycloakify": {
+    "x-rionizkeycloakify": {
         messages: {}
     }
 };

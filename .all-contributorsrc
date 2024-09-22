@@ -265,7 +265,7 @@
   "skipCi": true,
   "repoType": "github",
   "repoHost": "https://github.com",
-  "projectName": "keycloakify",
-  "projectOwner": "keycloakify",
+  "projectName": "rionizkeycloakify",
+  "projectOwner": "rionizkeycloakify",
   "commitType": "docs"
 }

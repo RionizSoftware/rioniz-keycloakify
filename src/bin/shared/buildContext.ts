@@ -34,7 +34,7 @@ export type BuildContext = {
     artifactId: string;
     projectDirPath: string;
     projectBuildDirPath: string;
-    /** Directory that keycloakify outputs to. Defaults to {cwd}/build_keycloak */
+    /** Directory that rionizkeycloakify outputs to. Defaults to {cwd}/build_keycloak */
     keycloakifyBuildDirPath: string;
     publicDirPath: string;
     cacheDirPath: string;
@@ -173,7 +173,7 @@ export function getBuildContext(params: {
             chalk.red(
                 [
                     `Can't locate your Keycloak theme source directory in .${pathSep}${pathRelative(process.cwd(), srcDirPath)}`,
-                    `Make sure to either use the Keycloakify CLI in the root of your Keycloakify project or use the --project CLI option`,
+                    `Make sure to either use the rionizkeycloakify CLI in the root of your rionizkeycloakify project or use the --project CLI option`,
                     `If you are collocating your Keycloak theme with your app you must have a directory named 'keycloak-theme' or 'keycloak_theme' in your 'src' directory`
                 ].join("\n")
             )
@@ -204,7 +204,7 @@ export function getBuildContext(params: {
 
         assert(
             output.includes(VITE_PLUGIN_SUB_SCRIPTS_ENV_NAMES.RESOLVE_VITE_CONFIG),
-            "Seems like the Keycloakify's Vite plugin is not installed."
+            "Seems like the rionizkeycloakify's Vite plugin is not installed."
         );
 
         const resolvedViteConfigStr = output
@@ -239,9 +239,9 @@ export function getBuildContext(params: {
                 .parse(JSON.parse(fs.readFileSync(packageJsonFilePath).toString("utf8")));
 
             if (
-                parsedPackageJson.dependencies?.keycloakify === undefined &&
-                parsedPackageJson.devDependencies?.keycloakify === undefined &&
-                parsedPackageJson.name !== "keycloakify" // NOTE: For local storybook build
+                parsedPackageJson.dependencies?.rionizkeycloakify === undefined &&
+                parsedPackageJson.devDependencies?.rionizkeycloakify === undefined &&
+                parsedPackageJson.name !== "rionizkeycloakify" // NOTE: For local storybook build
             ) {
                 break success;
             }
@@ -263,7 +263,7 @@ export function getBuildContext(params: {
             name?: string;
             version?: string;
             homepage?: string;
-            keycloakify?: BuildOptions_packageJson;
+            rionizkeycloakify?: BuildOptions_packageJson;
         };
 
         const zMultiPageApp = (() => {
@@ -390,7 +390,7 @@ export function getBuildContext(params: {
                 name: z.string().optional(),
                 version: z.string().optional(),
                 homepage: z.string().optional(),
-                keycloakify: zBuildOptions_packageJson.optional()
+                rionizkeycloakify: zBuildOptions_packageJson.optional()
             });
 
             assert<Equals<z.infer<typeof zTargetType>, TargetType>>();
@@ -413,10 +413,10 @@ export function getBuildContext(params: {
 
     const bundler = resolvedViteConfig !== undefined ? "vite" : "webpack";
 
-    if (bundler === "vite" && parsedPackageJson.keycloakify !== undefined) {
+    if (bundler === "vite" && parsedPackageJson.rionizkeycloakify !== undefined) {
         console.error(
             chalk.red(
-                `In vite projects, provide your Keycloakify options in vite.config.ts, not in package.json`
+                `In vite projects, provide your rionizkeycloakify options in vite.config.ts, not in package.json`
             )
         );
         process.exit(-1);
@@ -428,8 +428,8 @@ export function getBuildContext(params: {
                 assert(resolvedViteConfig !== undefined);
                 return resolvedViteConfig.buildOptions;
             case "webpack":
-                assert(parsedPackageJson.keycloakify !== undefined);
-                return parsedPackageJson.keycloakify;
+                assert(parsedPackageJson.rionizkeycloakify !== undefined);
+                return parsedPackageJson.rionizkeycloakify;
         }
         assert<Equals<typeof bundler, never>>(false);
     })();
@@ -462,7 +462,7 @@ export function getBuildContext(params: {
                 [
                     `You have set 'accountThemeImplementation' to '${implementedThemeTypes.account.type}'`,
                     `but the 'account' directory is missing in your theme source directory`,
-                    "Use the `npx keycloakify initialize-account-theme` command to create it"
+                    "Use the `npx rionizkeycloakify initialize-account-theme` command to create it"
                 ].join(" ")
             )
         );
@@ -472,7 +472,7 @@ export function getBuildContext(params: {
     const themeNames = ((): [string, ...string[]] => {
         if (buildOptions.themeName === undefined) {
             return parsedPackageJson.name === undefined
-                ? ["keycloakify"]
+                ? ["rionizkeycloakify"]
                 : [
                       parsedPackageJson.name
                           .replace(/^@(.*)/, "$1")
@@ -498,11 +498,11 @@ export function getBuildContext(params: {
                 break webpack;
             }
 
-            assert(parsedPackageJson.keycloakify !== undefined);
+            assert(parsedPackageJson.rionizkeycloakify !== undefined);
 
-            if (parsedPackageJson.keycloakify.projectBuildDirPath !== undefined) {
+            if (parsedPackageJson.rionizkeycloakify.projectBuildDirPath !== undefined) {
                 return getAbsoluteAndInOsFormatPath({
-                    pathIsh: parsedPackageJson.keycloakify.projectBuildDirPath,
+                    pathIsh: parsedPackageJson.rionizkeycloakify.projectBuildDirPath,
                     cwd: projectDirPath
                 });
             }
@@ -571,11 +571,11 @@ export function getBuildContext(params: {
                     break webpack;
                 }
 
-                assert(parsedPackageJson.keycloakify !== undefined);
+                assert(parsedPackageJson.rionizkeycloakify !== undefined);
 
-                if (parsedPackageJson.keycloakify.publicDirPath !== undefined) {
+                if (parsedPackageJson.rionizkeycloakify.publicDirPath !== undefined) {
                     return getAbsoluteAndInOsFormatPath({
-                        pathIsh: parsedPackageJson.keycloakify.publicDirPath,
+                        pathIsh: parsedPackageJson.rionizkeycloakify.publicDirPath,
                         cwd: projectDirPath
                     });
                 }
@@ -603,7 +603,7 @@ export function getBuildContext(params: {
                     ".cache"
                 );
             })(),
-            "keycloakify"
+            "rionizkeycloakify"
         ),
         urlPathname: (() => {
             webpack: {
@@ -638,15 +638,15 @@ export function getBuildContext(params: {
                     break webpack;
                 }
 
-                assert(parsedPackageJson.keycloakify !== undefined);
+                assert(parsedPackageJson.rionizkeycloakify !== undefined);
 
                 if (
-                    parsedPackageJson.keycloakify.staticDirPathInProjectBuildDirPath !==
-                    undefined
+                    parsedPackageJson.rionizkeycloakify
+                        .staticDirPathInProjectBuildDirPath !== undefined
                 ) {
                     getAbsoluteAndInOsFormatPath({
                         pathIsh:
-                            parsedPackageJson.keycloakify
+                            parsedPackageJson.rionizkeycloakify
                                 .staticDirPathInProjectBuildDirPath,
                         cwd: projectBuildDirPath
                     });

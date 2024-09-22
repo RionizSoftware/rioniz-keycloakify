@@ -104,7 +104,7 @@ export function generateFtlFilesCodeFactory(params: {
                 getThisCodebaseRootDirPath(),
                 "src",
                 "bin",
-                "keycloakify",
+                "rionizkeycloakify",
                 "generateFtl",
                 "kcContextDeclarationTemplate.ftl"
             )
@@ -130,12 +130,12 @@ export function generateFtlFilesCodeFactory(params: {
 
     // Remove part of the document marked as ignored.
     {
-        const startTags = $('meta[name="keycloakify-ignore-start"]');
+        const startTags = $('meta[name="rionizkeycloakify-ignore-start"]');
 
         startTags.each((...[, startTag]) => {
             const $startTag = $(startTag);
             const $endTag = $startTag
-                .nextAll('meta[name="keycloakify-ignore-end"]')
+                .nextAll('meta[name="rionizkeycloakify-ignore-end"]')
                 .first();
 
             if ($endTag.length) {

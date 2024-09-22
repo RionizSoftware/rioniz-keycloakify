@@ -1,5 +1,8 @@
-import type { ThemeType, AccountThemePageId } from "keycloakify/bin/shared/constants";
-import type { ValueOf } from "keycloakify/tools/ValueOf";
+import type {
+    ThemeType,
+    AccountThemePageId
+} from "rionizkeycloakify/bin/shared/constants";
+import type { ValueOf } from "rionizkeycloakify/tools/ValueOf";
 import { assert } from "tsafe/assert";
 import type { Equals } from "tsafe";
 
@@ -119,7 +122,7 @@ export declare namespace KcContext {
             username?: string;
         };
         properties: {};
-        "x-keycloakify": {
+        "x-rionizkeycloakify": {
             messages: Record<string, string>;
         };
     };

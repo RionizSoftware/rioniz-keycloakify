@@ -1,6 +1,6 @@
-import { clsx } from "keycloakify/tools/clsx";
-import type { PageProps } from "keycloakify/account/pages/PageProps";
-import { getKcClsx } from "keycloakify/account/lib/kcClsx";
+import { clsx } from "rionizkeycloakify/tools/clsx";
+import type { PageProps } from "rionizkeycloakify/account/pages/PageProps";
+import { getKcClsx } from "rionizkeycloakify/account/lib/kcClsx";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 

@@ -1,5 +1,8 @@
-import { type TemplateProps, type ClassKey } from "keycloakify/account/TemplateProps";
-import type { LazyOrNot } from "keycloakify/tools/LazyOrNot";
+import {
+    type TemplateProps,
+    type ClassKey
+} from "rionizkeycloakify/account/TemplateProps";
+import type { LazyOrNot } from "rionizkeycloakify/tools/LazyOrNot";
 
 export type PageProps<NarrowedKcContext, I18n> = {
     Template: LazyOrNot<(props: TemplateProps<any, any>) => JSX.Element | null>;

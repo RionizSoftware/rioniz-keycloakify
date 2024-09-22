@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import type { ExtendKcContext } from "keycloakify/account";
+import type { ExtendKcContext } from "rionizkeycloakify/account";
 import type { KcEnvName, ThemeName } from "../kc.gen";
 
 export type KcContextExtension = {

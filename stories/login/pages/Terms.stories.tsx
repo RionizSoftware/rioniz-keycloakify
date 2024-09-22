@@ -17,7 +17,7 @@ export const Default: Story = {
     render: () => (
         <KcPageStory
             kcContext={{
-                "x-keycloakify": {
+                "x-rionizkeycloakify": {
                     messages: {
                         termsText: "<p>My terms in <strong>English</strong></p>"
                     }
@@ -34,7 +34,7 @@ export const French: Story = {
                 locale: {
                     currentLanguageTag: "fr"
                 },
-                "x-keycloakify": {
+                "x-rionizkeycloakify": {
                     // cSpell: disable
                     messages: {
                         termsText: "<p>Mes terme en <strong>Français</strong></p>"

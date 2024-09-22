@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { clsx } from "keycloakify/tools/clsx";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
-import { getKcClsx } from "keycloakify/login/lib/kcClsx";
+import { clsx } from "rionizkeycloakify/tools/clsx";
+import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
+import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import { PasswordWrapper } from "keycloakify/login/pages/PasswordWrapper";
+import { PasswordWrapper } from "rionizkeycloakify/login/pages/PasswordWrapper";
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;

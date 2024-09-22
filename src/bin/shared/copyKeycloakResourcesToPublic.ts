@@ -24,7 +24,10 @@ export function copyKeycloakResourcesToPublic(params: {
         WELL_KNOWN_DIRECTORY_BASE_NAME.KEYCLOAKIFY_DEV_RESOURCES
     );
 
-    const keycloakifyBuildinfoFilePath = pathJoin(destDirPath, "keycloakify.buildinfo");
+    const keycloakifyBuildinfoFilePath = pathJoin(
+        destDirPath,
+        "rionizkeycloakify.buildinfo"
+    );
 
     const keycloakifyBuildinfoRaw = JSON.stringify(
         {
@@ -57,7 +60,7 @@ export function copyKeycloakResourcesToPublic(params: {
         force: true,
         recursive: true
     });
-    rmSync(pathJoin(pathDirname(destDirPath), ".keycloakify"), {
+    rmSync(pathJoin(pathDirname(destDirPath), ".rionizkeycloakify"), {
         force: true,
         recursive: true
     });
@@ -81,7 +84,7 @@ export function copyKeycloakResourcesToPublic(params: {
         Buffer.from(
             // prettier-ignore
             [
-                "This directory is only used in dev mode by Keycloakify",
+                "This directory is only used in dev mode by rionizkeycloakify",
                 "It won't be included in your final build.",
                 "Do not modify anything in this directory.",
             ].join("\n")

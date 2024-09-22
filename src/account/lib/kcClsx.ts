@@ -1,5 +1,5 @@
-import { createGetKcClsx } from "keycloakify/lib/getKcClsx";
-import type { ClassKey } from "keycloakify/account/TemplateProps";
+import { createGetKcClsx } from "rionizkeycloakify/lib/getKcClsx";
+import type { ClassKey } from "rionizkeycloakify/account/TemplateProps";
 
 export const { getKcClsx } = createGetKcClsx<ClassKey>({
     defaultClasses: {

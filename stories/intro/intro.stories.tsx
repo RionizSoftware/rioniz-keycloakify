@@ -34,12 +34,12 @@ function Introduction() {
                     <KeycloakifyRotatingLogo className={classes.keycloakifyLogo} />
                 </div>
                 <h1>
-                    <a href={theme.brandUrl}>Keycloakify </a> Storybook
+                    <a href={theme.brandUrl}>rionizkeycloakify </a> Storybook
                 </h1>
 
                 <p>
                     This website showcases all the Keycloak user-facing pages of the Login and{" "}
-                    <a href="https://docs.keycloakify.dev/account-theme#multi-page">Account Multi-Page theme</a>.<br />
+                    <a href="https://docs.rionizkeycloakify.dev/account-theme#multi-page">Account Multi-Page theme</a>.<br />
                     The storybook serves as a reference to help you determine which pages you would like to personalize.
                     <br />
                     These pages are a direct React adaptation of the{" "}

@@ -1,6 +1,6 @@
 import type { Key } from "react";
-import { getKcClsx } from "keycloakify/account/lib/kcClsx";
-import type { PageProps } from "keycloakify/account/pages/PageProps";
+import { getKcClsx } from "rionizkeycloakify/account/lib/kcClsx";
+import type { PageProps } from "rionizkeycloakify/account/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 

@@ -1,9 +1,9 @@
 import { Suspense } from "react";
-import type { ClassKey } from "keycloakify/account";
+import type { ClassKey } from "rionizkeycloakify/account";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
-import DefaultPage from "keycloakify/account/DefaultPage";
-import Template from "keycloakify/account/Template";
+import DefaultPage from "rionizkeycloakify/account/DefaultPage";
+import Template from "rionizkeycloakify/account/Template";
 
 export default function KcPage(props: { kcContext: KcContext }) {
     const { kcContext } = props;

@@ -109,7 +109,7 @@ export async function command(params: { cliCommandOptions: CliCommandOptions }) 
                     "On which version of Keycloak do you want to test your theme?"
                 ),
                 chalk.gray(
-                    "You can also explicitly provide the version with `npx keycloakify start-keycloak --keycloak-version 25.0.2` (or any other version)"
+                    "You can also explicitly provide the version with `npx rionizkeycloakify start-keycloak --keycloak-version 25.0.2` (or any other version)"
                 )
             ].join("\n")
         );
@@ -175,7 +175,7 @@ export async function command(params: { cliCommandOptions: CliCommandOptions }) 
         if (!isKeycloakifyBuildSuccess) {
             console.log(
                 chalk.red(
-                    `Keycloakify build failed, exiting. Try running 'npx keycloakify build' and see what's wrong.`
+                    `rionizkeycloakify build failed, exiting. Try running 'npx rionizkeycloakify build' and see what's wrong.`
                 )
             );
             process.exit(1);
@@ -256,7 +256,7 @@ export async function command(params: { cliCommandOptions: CliCommandOptions }) 
 
             console.log(
                 `${chalk.yellow(
-                    `Keycloakify do not have a realm configuration for Keycloak ${keycloakMajorVersionNumber} yet.`
+                    `rionizkeycloakify do not have a realm configuration for Keycloak ${keycloakMajorVersionNumber} yet.`
                 )}`
             );
 
@@ -297,7 +297,7 @@ export async function command(params: { cliCommandOptions: CliCommandOptions }) 
                 fs
                     .readFileSync(internalFilePath)
                     .toString("utf8")
-                    .replace(/keycloakify\-starter/g, buildContext.themeNames[0])
+                    .replace(/rionizkeycloakify\-starter/g, buildContext.themeNames[0])
             ),
             "utf8"
         );
@@ -520,7 +520,7 @@ export async function command(params: { cliCommandOptions: CliCommandOptions }) 
                     `${chalk.green("Your theme is accessible at:")}`,
                     `${chalk.green("➜")} ${chalk.cyan.bold(
                         (() => {
-                            const url = new URL("https://my-theme.keycloakify.dev");
+                            const url = new URL("https://my-theme.rionizkeycloakify.dev");
 
                             if (port !== DEFAULT_PORT) {
                                 url.searchParams.set("port", `${port}`);

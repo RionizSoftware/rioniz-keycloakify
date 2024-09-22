@@ -1,4 +1,4 @@
-import { createUseI18n } from "keycloakify/account";
+import { createUseI18n } from "rionizkeycloakify/account";
 
 export const { useI18n, ofTypeI18n } = createUseI18n({});
 

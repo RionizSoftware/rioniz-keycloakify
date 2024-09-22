@@ -1,8 +1,8 @@
 import type { ExtendKcContext, KcContext as KcContextBase } from "./KcContext";
-import type { AccountThemePageId } from "keycloakify/bin/shared/constants";
-import type { DeepPartial } from "keycloakify/tools/DeepPartial";
-import { deepAssign } from "keycloakify/tools/deepAssign";
-import { structuredCloneButFunctions } from "keycloakify/tools/structuredCloneButFunctions";
+import type { AccountThemePageId } from "rionizkeycloakify/bin/shared/constants";
+import type { DeepPartial } from "rionizkeycloakify/tools/DeepPartial";
+import { deepAssign } from "rionizkeycloakify/tools/deepAssign";
+import { structuredCloneButFunctions } from "rionizkeycloakify/tools/structuredCloneButFunctions";
 import { kcContextMocks, kcContextCommonMock } from "./kcContextMocks";
 import { exclude } from "tsafe/exclude";
 

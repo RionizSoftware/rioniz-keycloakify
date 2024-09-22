@@ -1,8 +1,8 @@
-import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
-import type { PageProps } from "keycloakify/login/pages/PageProps";
+import { getKcClsx, type KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
-import { PasswordWrapper } from "keycloakify/login/pages/PasswordWrapper";
+import { PasswordWrapper } from "rionizkeycloakify/login/pages/PasswordWrapper";
 
 export default function LoginUpdatePassword(props: PageProps<Extract<KcContext, { pageId: "login-update-password.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;

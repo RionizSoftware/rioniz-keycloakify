@@ -1,3 +1,3 @@
-export type { ExtendKcContext, Attribute } from "keycloakify/login/KcContext";
-export type { ClassKey } from "keycloakify/login/TemplateProps";
-export { createUseI18n } from "keycloakify/login/i18n";
+export type { ExtendKcContext, Attribute } from "rionizkeycloakify/login/KcContext";
+export type { ClassKey } from "rionizkeycloakify/login/TemplateProps";
+export { createUseI18n } from "rionizkeycloakify/login/i18n";

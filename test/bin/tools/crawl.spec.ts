@@ -1,6 +1,6 @@
 import { join as pathJoin } from "path";
 import { it, describe, expect, vi, beforeAll, afterAll } from "vitest";
-import { crawl } from "keycloakify/bin/tools/crawl";
+import { crawl } from "rionizkeycloakify/bin/tools/crawl";
 
 describe("crawl", () => {
     describe("crawRec", () => {

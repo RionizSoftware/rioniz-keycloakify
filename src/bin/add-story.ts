@@ -114,7 +114,7 @@ export async function command(params: { cliCommandOptions: CliCommandOptions }) 
         )
         .toString("utf8")
         .replace('import React from "react";\n', "")
-        .replace(/from "[./]+dist\//, 'from "keycloakify/');
+        .replace(/from "[./]+dist\//, 'from "rionizkeycloakify/');
 
     {
         const targetDirPath = pathDirname(targetFilePath);
@@ -130,7 +130,7 @@ export async function command(params: { cliCommandOptions: CliCommandOptions }) 
         [
             `${chalk.green("✓")} ${chalk.bold(
                 pathJoin(".", pathRelative(process.cwd(), targetFilePath))
-            )} copy pasted from the Keycloakify source code into your project`,
+            )} copy pasted from the rionizkeycloakify source code into your project`,
             `You can start storybook with ${chalk.bold("npm run storybook")}`
         ].join("\n")
     );
