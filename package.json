@@ -1,5 +1,5 @@
 {
-    "name": "keycloakify",
+    "name": "rioniz-keycloakify",
     "version": "10.1.4",
     "description": "Create Keycloak themes using React",
     "repository": {
