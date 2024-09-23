@@ -2,7 +2,7 @@ import * as child_process from "child_process";
 import { startRebuildOnSrcChange } from "./shared/startRebuildOnSrcChange";
 
 (async () => {
-    run("yarn build");
+    run("npm run build");
 
     {
         const child = child_process.spawn("npx", ["start-storybook", "-p", "6006"], {

@@ -1,6 +1,6 @@
 import * as child_process from "child_process";
 
-run("yarn build");
+run("npm run build");
 run("npx build-storybook");
 
 function run(command: string, options?: { env?: NodeJS.ProcessEnv }) {

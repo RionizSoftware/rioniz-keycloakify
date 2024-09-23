@@ -9,11 +9,11 @@ export function startRebuildOnSrcChange() {
     const { waitForDebounce } = waitForDebounceFactory({ delay: 400 });
 
     const runYarnBuild = runExclusive.build(async () => {
-        console.log(chalk.green("Running `yarn build`"));
+        console.log(chalk.green("Running `npm run build`"));
 
         const dCompleted = new Deferred<void>();
 
-        const child = child_process.spawn("yarn", ["build"], { shell: true });
+        const child = child_process.spawn("npm", ["run build"], { shell: true });
 
         child.stdout.on("data", data => process.stdout.write(data));
 

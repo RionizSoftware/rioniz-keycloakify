@@ -32,17 +32,17 @@ import { crawl } from "../src/bin/tools/crawl";
 fs.rmSync("dist", { recursive: true, force: true });
 fs.rmSync(".yarn_home", { recursive: true, force: true });
 
-run("yarn install");
-run("yarn build");
+run("npm install");
+run("npm run build");
 
-const starterName = "rionizkeycloakify-starter";
+const starterName = "RionizKeycloakTheme";
 
 fs.rmSync(join("..", starterName, "node_modules"), {
     recursive: true,
     force: true
 });
 
-run("yarn install", { cwd: join("..", starterName) });
+run("npm install", { cwd: join("..", starterName) });
 
 run(`npx tsx ${join("scripts", "link-in-app.ts")} ${starterName}`);
 
