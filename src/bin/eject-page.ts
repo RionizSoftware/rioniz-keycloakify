@@ -302,13 +302,13 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
                 getThisCodebaseRootDirPath(),
                 "src",
                 themeType,
-                pagesOrDot,
+                "pages",
                 "PasswordWrapper.tsx"
             );
             const passwordWrapperFilePathInUserProject = pathJoin(
                 buildContext.themeSrcDirPath,
                 themeType,
-                pagesOrDot,
+                "pages",
                 "PasswordWrapper.tsx"
             );
             fs.copyFileSync(
