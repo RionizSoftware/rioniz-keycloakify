@@ -1,7 +1,7 @@
-import { i18nBuilder } from "keycloakify/login/i18n";
+import { i18nBuilder } from "rionizkeycloakify/login/i18n";
 import { assert, type Equals } from "tsafe/assert";
 import { Reflect } from "tsafe/Reflect";
-import type { I18n as I18n_notExtended } from "keycloakify/login/i18n";
+import type { I18n as I18n_notExtended } from "rionizkeycloakify/login/i18n";
 
 const { useI18n, ofTypeI18n } = i18nBuilder
     .withThemeName<"my-theme-1" | "my-theme-2">()
@@ -49,7 +49,7 @@ type I18n = typeof ofTypeI18n;
     const got = i18n.currentLanguage.languageTag;
 
     type Expected =
-        | import("keycloakify/login/i18n/messages_defaultSet/types").LanguageTag
+        | import("rionizkeycloakify/login/i18n/messages_defaultSet/types").LanguageTag
         | "he";
 
     assert<Equals<typeof got, Expected>>;

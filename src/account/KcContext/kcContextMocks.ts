@@ -1,4 +1,4 @@
-import "keycloakify/tools/Object.fromEntries";
+import "rionizkeycloakify/tools/Object.fromEntries";
 import { WELL_KNOWN_DIRECTORY_BASE_NAME } from "rionizkeycloakify/bin/shared/constants";
 import { id } from "tsafe/id";
 import type { KcContext } from "./KcContext";

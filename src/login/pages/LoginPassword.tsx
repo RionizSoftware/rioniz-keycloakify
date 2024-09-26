@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { kcSanitize } from "rionizkeycloakify/lib/kcSanitize";
 import { clsx } from "rionizkeycloakify/tools/clsx";
 import { getKcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";

@@ -1,4 +1,4 @@
-import { DOMPurify } from "keycloakify/tools/vendor/dompurify";
+import { DOMPurify } from "rionizkeycloakify//tools/vendor/dompurify";
 
 type TagType = {
     name: string;

@@ -1,6 +1,6 @@
-import { assert } from "keycloakify/tools/assert";
-import { useInsertLinkTags } from "keycloakify/tools/useInsertLinkTags";
-import type { KcContext } from "keycloakify/account/KcContext";
+import { assert } from "rionizkeycloakify/tools/assert";
+import { useInsertLinkTags } from "rionizkeycloakify/tools/useInsertLinkTags";
+import type { KcContext } from "rionizkeycloakify/account/KcContext";
 
 export type KcContextLike = {
     url: {

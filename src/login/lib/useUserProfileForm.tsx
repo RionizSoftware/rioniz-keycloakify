@@ -1,4 +1,4 @@
-import "keycloakify/tools/Array.prototype.every";
+import "rionizkeycloakify/tools/Array.prototype.every";
 import { useMemo, useReducer, useEffect, Fragment, type Dispatch } from "react";
 import { assert, type Equals } from "tsafe/assert";
 import { id } from "tsafe/id";

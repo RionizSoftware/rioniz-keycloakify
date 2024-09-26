@@ -5,7 +5,7 @@ So, I'm using recast in a node script to parse a typescript source file and extr
 Example of the source file:
 
 ```ts
-import { createUseI18n } from "keycloakify/login";
+import { createUseI18n } from "rionizkeycloakify/login";
 
 export const { useI18n, ofTypeI18n } = createUseI18n({
     en: {
@@ -71,7 +71,7 @@ recast.visit(root, {
 It works, but now, the API has changed. The source file looks like this:
 
 ```ts
-import { i18nBuilder } from "keycloakify/login/i18n";
+import { i18nBuilder } from "rionizkeycloakify/login/i18n";
 
 const { useI18n, ofTypeI18n } = i18nBuilder
     .withThemeName<"my-theme-1" | "my-theme-2">()

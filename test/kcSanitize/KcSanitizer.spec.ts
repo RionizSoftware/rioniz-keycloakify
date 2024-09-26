@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { KcSanitizer } from "keycloakify/lib/kcSanitize/KcSanitizer";
+import { KcSanitizer } from "rionizkeycloakify/lib/kcSanitize/KcSanitizer";
 import { decode } from "html-entities";
 import DOMPurify from "isomorphic-dompurify";
 
