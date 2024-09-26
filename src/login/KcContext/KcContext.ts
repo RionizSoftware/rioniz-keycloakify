@@ -67,7 +67,7 @@ assert<KcContext["themeType"] extends ThemeType ? true : false>();
 
 export declare namespace KcContext {
     export type Common = {
-        id: string;
+        id?: string;
         themeVersion: string;
         keycloakifyVersion: string;
         themeType: "login";
