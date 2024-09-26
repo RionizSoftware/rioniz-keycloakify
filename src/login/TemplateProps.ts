@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 export type TemplateProps<KcContext, I18n> = {
+    id?: string;
     kcContext: KcContext;
     i18n: I18n;
     doUseDefaultCss: boolean;

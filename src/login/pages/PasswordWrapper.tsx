@@ -3,7 +3,7 @@ import type { I18n } from "keycloakify/login/i18n";
 import { useEffect, useReducer } from "react";
 import { assert } from "keycloakify/tools/assert";
 
-export function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
+export function PasswordWrapper(props: { id?: string; kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
     const { kcClsx, i18n, passwordInputId, children } = props;
 
     const { msgStr } = i18n;

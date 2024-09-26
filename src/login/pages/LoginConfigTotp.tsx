@@ -192,7 +192,7 @@ export default function LoginConfigTotp(props: PageProps<Extract<KcContext, { pa
     );
 }
 
-function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
+function LogoutOtherSessions(props: { id?: string; kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
 
     const { msg } = i18n;

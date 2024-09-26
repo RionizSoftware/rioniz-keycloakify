@@ -3,6 +3,7 @@ import type { KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { Attribute } from "keycloakify/login/KcContext";
 
 export type UserProfileFormFieldsProps<KcContext = any, I18n = any> = {
+    id?: string;
     kcContext: Extract<KcContext, { profile: unknown }>;
     i18n: I18n;
     kcClsx: KcClsx;
@@ -13,6 +14,7 @@ export type UserProfileFormFieldsProps<KcContext = any, I18n = any> = {
 };
 
 type BeforeAfterFieldProps<I18n> = {
+    id?: string;
     attribute: Attribute;
     dispatchFormAction: React.Dispatch<FormAction>;
     displayableErrors: FormFieldError[];
