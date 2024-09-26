@@ -9,6 +9,7 @@ import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 
 type RegisterProps = PageProps<Extract<KcContext, { pageId: "register.ftl" }>, I18n> & {
+    id?: string;
     UserProfileFormFields: LazyOrNot<(props: UserProfileFormFieldsProps) => JSX.Element>;
     doMakeUserConfirmPassword: boolean;
 };
@@ -106,6 +107,7 @@ export default function Register(props: RegisterProps) {
 }
 
 function TermsAcceptance(props: {
+    id?: string;
     i18n: I18n;
     kcClsx: KcClsx;
     messagesPerField: Pick<KcContext["messagesPerField"], "existsError" | "get">;

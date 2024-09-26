@@ -7,6 +7,7 @@ import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 
 type UpdateEmailProps = PageProps<Extract<KcContext, { pageId: "update-email.ftl" }>, I18n> & {
+    id?: string;
     UserProfileFormFields: LazyOrNot<(props: UserProfileFormFieldsProps) => JSX.Element>;
     doMakeUserConfirmPassword: boolean;
 };
@@ -80,7 +81,7 @@ export default function UpdateEmail(props: UpdateEmailProps) {
     );
 }
 
-function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
+function LogoutOtherSessions(props: { id?: string; kcClsx: KcClsx; i18n: I18n }) {
     const { kcClsx, i18n } = props;
 
     const { msg } = i18n;

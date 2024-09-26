@@ -16,7 +16,7 @@ export type ExtendKcContext<
               KcContextExtension & {
                   pageId: PageId;
               } & KcContextExtensionPerPage[PageId]
-        : Extract<KcContext, { pageId: PageId }> &
+        : Extract<KcContext, { id: string; pageId: PageId }> &
               KcContextExtension &
               KcContextExtensionPerPage[PageId];
 }>;
@@ -67,6 +67,7 @@ assert<KcContext["themeType"] extends ThemeType ? true : false>();
 
 export declare namespace KcContext {
     export type Common = {
+        id: string;
         themeVersion: string;
         keycloakifyVersion: string;
         themeType: "login";
