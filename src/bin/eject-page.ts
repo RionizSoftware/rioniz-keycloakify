@@ -247,6 +247,16 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
 
             return "pages";
         })();
+        const pagesOrDotReverse = (() => {
+            if (
+                pageIdOrComponent === templateValue ||
+                pageIdOrComponent === userProfileFormFieldsValue
+            ) {
+                return "pages";
+            }
+
+            return ".";
+        })();
 
         const targetFilePath = pathJoin(
             buildContext.themeSrcDirPath,
@@ -295,7 +305,7 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
             //Change import path so that it works in user's project code base
             componentCode = componentCode.replace(
                 passwordWrapperRegex,
-                `import { PasswordWrapper } from "${pagesOrDot}/PasswordWrapper";`
+                `import { PasswordWrapper } from "${pagesOrDotReverse}/PasswordWrapper";`
             );
 
             const passwordWrapperFilePathInKeycloakify = pathJoin(
