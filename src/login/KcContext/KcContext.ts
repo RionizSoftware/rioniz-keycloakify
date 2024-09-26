@@ -16,7 +16,7 @@ export type ExtendKcContext<
               KcContextExtension & {
                   pageId: PageId;
               } & KcContextExtensionPerPage[PageId]
-        : Extract<KcContext, { id: string; pageId: PageId }> &
+        : Extract<KcContext, { id?: string; pageId: PageId }> &
               KcContextExtension &
               KcContextExtensionPerPage[PageId];
 }>;
