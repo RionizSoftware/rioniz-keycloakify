@@ -295,7 +295,7 @@ export async function command(params: { cliCommandOptions: CliEjectPageCommandOp
             //Change import path so that it works in user's project code base
             componentCode = componentCode.replace(
                 passwordWrapperRegex,
-                `import { PasswordWrapper } from "./PasswordWrapper";`
+                `import { PasswordWrapper } from "${pagesOrDot}/PasswordWrapper";`
             );
 
             const passwordWrapperFilePathInKeycloakify = pathJoin(
