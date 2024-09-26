@@ -1,4 +1,4 @@
-import { useEffect, useReducer, Fragment } from "react";
+import { useEffect, Fragment } from "react";
 import { assert } from "rionizkeycloakify/tools/assert";
 import type { KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
 import {
@@ -11,6 +11,7 @@ import type { UserProfileFormFieldsProps } from "rionizkeycloakify/login/UserPro
 import type { Attribute } from "rionizkeycloakify/login/KcContext";
 import type { KcContext } from "./KcContext";
 import type { I18n } from "./i18n";
+import { PasswordWrapper } from "rionizkeycloakify/login/pages/PasswordWrapper";
 
 export default function UserProfileFormFields(props: UserProfileFormFieldsProps<KcContext, I18n>) {
     const { kcContext, i18n, kcClsx, onIsFormSubmittableValueChange, doMakeUserConfirmPassword, BeforeField, AfterField } = props;
@@ -110,6 +111,7 @@ export default function UserProfileFormFields(props: UserProfileFormFieldsProps<
 }
 
 function GroupLabel(props: {
+    id?: string;
     attribute: Attribute;
     groupNameRef: {
         current: string;
@@ -169,7 +171,13 @@ function GroupLabel(props: {
     return null;
 }
 
-function FieldErrors(props: { attribute: Attribute; displayableErrors: FormFieldError[]; fieldIndex: number | undefined; kcClsx: KcClsx }) {
+function FieldErrors(props: {
+    id?: string;
+    attribute: Attribute;
+    displayableErrors: FormFieldError[];
+    fieldIndex: number | undefined;
+    kcClsx: KcClsx;
+}) {
     const { attribute, fieldIndex, kcClsx } = props;
 
     const displayableErrors = props.displayableErrors.filter(error => error.fieldIndex === fieldIndex);
@@ -197,6 +205,7 @@ function FieldErrors(props: { attribute: Attribute; displayableErrors: FormField
 }
 
 type InputFieldByTypeProps = {
+    id?: string;
     attribute: Attribute;
     valueOrValues: string | string[];
     displayableErrors: FormFieldError[];
@@ -241,37 +250,6 @@ function InputFieldByType(props: InputFieldByTypeProps) {
             return inputNode;
         }
     }
-}
-
-function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
-    const { kcClsx, i18n, passwordInputId, children } = props;
-
-    const { msgStr } = i18n;
-
-    const [isPasswordRevealed, toggleIsPasswordRevealed] = useReducer((isPasswordRevealed: boolean) => !isPasswordRevealed, false);
-
-    useEffect(() => {
-        const passwordInputElement = document.getElementById(passwordInputId);
-
-        assert(passwordInputElement instanceof HTMLInputElement);
-
-        passwordInputElement.type = isPasswordRevealed ? "text" : "password";
-    }, [isPasswordRevealed]);
-
-    return (
-        <div className={kcClsx("kcInputGroup")}>
-            {children}
-            <button
-                type="button"
-                className={kcClsx("kcFormPasswordVisibilityButtonClass")}
-                aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
-                aria-controls={passwordInputId}
-                onClick={toggleIsPasswordRevealed}
-            >
-                <i className={kcClsx(isPasswordRevealed ? "kcFormPasswordVisibilityIconHide" : "kcFormPasswordVisibilityIconShow")} aria-hidden />
-            </button>
-        </div>
-    );
 }
 
 function InputTag(props: InputFieldByTypeProps & { fieldIndex: number | undefined }) {
@@ -378,6 +356,7 @@ function InputTag(props: InputFieldByTypeProps & { fieldIndex: number | undefine
 }
 
 function AddRemoveButtonsMultiValuedAttribute(props: {
+    id?: string;
     attribute: Attribute;
     values: string[];
     fieldIndex: number;
