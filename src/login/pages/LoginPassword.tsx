@@ -65,7 +65,7 @@ export default function LoginPassword(props: PageProps<Extract<KcContext, { page
                                     className={kcClsx("kcInputErrorMessageClass")}
                                     aria-live="polite"
                                     dangerouslySetInnerHTML={{
-                                        __html: messagesPerField.get("password")
+                                        __html: kcSanitize(messagesPerField.get("password"))
                                     }}
                                 />
                             )}

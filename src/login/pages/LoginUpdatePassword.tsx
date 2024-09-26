@@ -1,4 +1,5 @@
 import { getKcClsx, type KcClsx } from "rionizkeycloakify/login/lib/kcClsx";
+import { kcSanitize } from "rionizkeycloakify/lib/kcSanitize";
 import type { PageProps } from "rionizkeycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
@@ -51,7 +52,7 @@ export default function LoginUpdatePassword(props: PageProps<Extract<KcContext, 
                                 className={kcClsx("kcInputErrorMessageClass")}
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
-                                    __html: messagesPerField.get("password")
+                                    __html: kcSanitize(messagesPerField.get("password"))
                                 }}
                             />
                         )}
@@ -83,7 +84,7 @@ export default function LoginUpdatePassword(props: PageProps<Extract<KcContext, 
                                 className={kcClsx("kcInputErrorMessageClass")}
                                 aria-live="polite"
                                 dangerouslySetInnerHTML={{
-                                    __html: messagesPerField.get("password-confirm")
+                                    __html: kcSanitize(messagesPerField.get("password-confirm"))
                                 }}
                             />
                         )}

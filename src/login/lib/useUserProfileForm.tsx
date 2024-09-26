@@ -1,8 +1,9 @@
-import "rionizkeycloakify/tools/Array.prototype.every";
+import "keycloakify/tools/Array.prototype.every";
 import { useMemo, useReducer, useEffect, Fragment, type Dispatch } from "react";
 import { assert, type Equals } from "tsafe/assert";
 import { id } from "tsafe/id";
 import { structuredCloneButFunctions } from "rionizkeycloakify/tools/structuredCloneButFunctions";
+import { kcSanitize } from "rionizkeycloakify/lib/kcSanitize";
 import { useConstCallback } from "rionizkeycloakify/tools/useConstCallback";
 import { emailRegexp } from "rionizkeycloakify/tools/emailRegExp";
 import { formatNumber } from "rionizkeycloakify/tools/formatNumber";
@@ -10,7 +11,7 @@ import { useInsertScriptTags } from "rionizkeycloakify/tools/useInsertScriptTags
 import type { PasswordPolicies, Attribute, Validators } from "rionizkeycloakify/login/KcContext";
 import type { KcContext } from "../KcContext";
 import type { MessageKey_defaultSet } from "rionizkeycloakify/login/i18n";
-import { KcContextLike as KcContextLike_i18n } from "rionizkeycloakify/login/i18n";
+import type { KcContextLike as KcContextLike_i18n } from "rionizkeycloakify/login/i18n";
 import type { I18n } from "../i18n";
 
 export type FormFieldError = {
@@ -113,7 +114,7 @@ export function useUserProfileForm(params: UseUserProfileFormParams): ReturnType
     const { insertScriptTags } = useInsertScriptTags({
         componentOrHookName: "useUserProfileForm",
         scriptTags: Object.keys(kcContext.profile?.html5DataAnnotations ?? {})
-            .filter(key => key !== "kcMultivalued" && key !== "kcNumberFormat") // NOTE: rionizkeycloakify handles it.
+            .filter(key => key !== "kcMultivalued" && key !== "kcNumberFormat") // NOTE: Keycloakify handles it.
             .map(key => ({
                 type: "module",
                 src: `${kcContext.url.resourcesPath}/js/${key}.js`
@@ -661,7 +662,7 @@ function useGetErrors(params: { kcContext: KcContextLike_useGetErrors; i18n: I18
                             <span
                                 key={0}
                                 dangerouslySetInnerHTML={{
-                                    __html: errorMessageStr
+                                    __html: kcSanitize(errorMessageStr)
                                 }}
                             />
                         ),
